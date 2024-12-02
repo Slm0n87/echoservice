@@ -15,13 +15,16 @@ jobs:
     strategy:
       matrix:
         go-version: [1.23.x]
-        os: [ubuntu-latest]
+        os: [ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install Go
         uses: actions/setup-go@v5
         with:
           go-version: ${{ matrix.go-version }}
+      - uses: extractions/setup-just@v2
+        with:
+          just-version: 1.37.0
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Run Lint
@@ -34,5 +37,5 @@ jobs:
       #     command: lint
       #     config: .github/ct.yaml
 
-      - name: Runs helm docs
-        run: make helm-docs
+      # - name: Runs helm docs
+      #   run: make helm-docs
