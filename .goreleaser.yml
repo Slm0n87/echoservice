@@ -55,7 +55,7 @@ dockers:
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
       - --label=org.opencontainers.image.licenses=Apache-2.0
       - --platform=linux/amd64
-    skip_push: false
+    skip_push: true
 
   - id: echoservice-arm64
     use: buildx
@@ -74,7 +74,7 @@ dockers:
       - --label=org.opencontainers.image.licenses=Apache-2.0
       - --label=org.opencontainers.image.platform.os=linux
       - --platform=linux/arm64
-    skip_push: false
+    skip_push: true
 
 # https://goreleaser.com/cookbooks/multi-platform-docker-images
 docker_manifests:
