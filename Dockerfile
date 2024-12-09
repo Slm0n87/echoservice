@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 RUN go build -o bin/echoservice main.go
 
-FROM gcr.io/distroless/base-debian11@sha256:3c8bc83024156c914b0b9455fa51ae6b0ca5318cfad0508d634e9f1844ef9d80
+FROM gcr.io/distroless/base-debian11@sha256:2eebbdaceeec718d203fd32370a1c1960b7d9d550d6acb1bca4957ab8560e3fb
 
 WORKDIR /app
 COPY --from=builder /app/bin/echoservice .
