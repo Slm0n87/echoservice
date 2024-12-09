@@ -82,7 +82,8 @@ docker_manifests:
     image_templates:
       - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:{{ .Tag }}-amd64"
       - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:{{ .Tag }}-arm64"
-  - name_template: "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:latest"
-    image_templates:
-      - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:{{ .Tag }}-amd64"
-      - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:{{ .Tag }}-arm64"
+      - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:latest"
+  # - name_template: "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:latest"
+  #   image_templates:
+  #     - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:{{ .Tag }}-amd64"
+  #     - "{{ .Env.REGISTRY }}/{{ .Env.IMAGE_NAME }}:{{ .Tag }}-arm64"
