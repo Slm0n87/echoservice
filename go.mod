@@ -1,3 +1,3 @@
-module github.com/Slm0n87/echoservice
+module github.com/slm0n87/echoservice
 
-go 1.23.3
+go 1.23.4
