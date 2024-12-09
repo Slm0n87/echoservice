@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  echoservice:
+  - apiVersion: v2
+    appVersion: v0.0.1
+    created: "2024-12-09T21:19:11.98274429Z"
+    description: A Helm chart for a echoservice
+    digest: 64422c3609e3489cd11dd95c66f3cf10e69c7647347ef6e9d1d3fbcea3e84fdd
+    name: echoservice
+    urls:
+    - https://github.com/slm0n87/echoservice/releases/download/echoservice-0.0.2/echoservice-0.0.2.tgz
+    version: 0.0.2
+generated: "2024-12-09T21:19:11.982750872Z"
